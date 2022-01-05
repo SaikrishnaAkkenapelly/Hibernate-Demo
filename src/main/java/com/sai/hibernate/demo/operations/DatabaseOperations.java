@@ -22,9 +22,9 @@ public class DatabaseOperations
 			sessionFactory = new Configuration().configure().buildSessionFactory();
 		}
 		catch(HibernateException hibernateException)
-	    {
+		{
 			hibernateException.printStackTrace();
-	    }
+		}
 	}
 
 	/**
@@ -38,7 +38,7 @@ public class DatabaseOperations
 			return sessionFactory.openSession();
 		}
 		catch(HibernateException hibernateException)
-	    {
+		{
 			hibernateException.printStackTrace();
 	    	return null;
 	    }
