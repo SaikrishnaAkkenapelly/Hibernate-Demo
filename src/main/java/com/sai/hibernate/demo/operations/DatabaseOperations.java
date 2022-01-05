@@ -40,8 +40,8 @@ public class DatabaseOperations
 		catch(HibernateException hibernateException)
 		{
 			hibernateException.printStackTrace();
-	    	return null;
-	    }
+	    		return null;
+	    	}
 	}
 	
 	/**
@@ -51,7 +51,7 @@ public class DatabaseOperations
 	public static void closeSession(Session session)
 	{
 		if(session != null)
-    		session.close();
+    			session.close();
 	}
 	
 	/**
@@ -114,10 +114,10 @@ public class DatabaseOperations
 			session.getTransaction().commit();
 		}
 		catch(HibernateException hibernateException)
-	    {
-	    	hibernateException.printStackTrace();
-	    	session.getTransaction().rollback();
-	    }
+	   	 {
+	    		hibernateException.printStackTrace();
+	    		session.getTransaction().rollback();
+	   	 }
 		finally
 		{
 			if(session != null)
@@ -149,14 +149,14 @@ public class DatabaseOperations
 			session.getTransaction().commit();
 		}
 		catch(HibernateException hibernateException)
-	    {
+	 	{
 	    	hibernateException.printStackTrace();
 	    	session.getTransaction().rollback();
-	    }
+	   	}
 		finally
 		{
 			if(session != null)
-	    		session.close();
+	    			session.close();
 		}
 		
 		return records;
@@ -179,10 +179,10 @@ public class DatabaseOperations
 			session.getTransaction().commit();
 		}
 		catch(HibernateException hibernateException)
-	    {
-	    	hibernateException.printStackTrace();
-	    	session.getTransaction().rollback();
-	    }
+	    	{
+	    		hibernateException.printStackTrace();
+	    		session.getTransaction().rollback();
+	    	}
 		finally
 		{
 			if(session != null)
@@ -207,10 +207,10 @@ public class DatabaseOperations
 			session.getTransaction().commit();
 		}
 		catch(HibernateException hibernateException)
-	    {
-	    	hibernateException.printStackTrace();
-	    	session.getTransaction().rollback();
-	    }
+	   	{
+	    		hibernateException.printStackTrace();
+	    		session.getTransaction().rollback();
+	   	}
 		finally
 		{
 			if(session != null)
